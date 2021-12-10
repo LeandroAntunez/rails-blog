@@ -32,6 +32,10 @@ class ArticlesController < ApplicationController
         redirect_to @article
     end
 
+    def from_author
+        @user = User.find(params[:user_id])
+    end
+
     def find_article
         @article = Article.find(params[:id])
     end
