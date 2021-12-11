@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
     end
 
     def strong_params_article
-        params.require(:article).permit(:title, :content)
+        params.require(:article).permit(:title, :content, :category_elements)
     end
 
     
