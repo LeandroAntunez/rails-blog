@@ -1,3 +1,5 @@
+<div class="small-container center-block">
+
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div id="error_explanation">
@@ -25,3 +27,5 @@
     <%= form.submit "Guardar", class:"btn btn-primary" %>
   </div>
 <% end %>
+
+</div>
