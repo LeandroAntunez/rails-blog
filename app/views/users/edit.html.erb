@@ -1,7 +1,9 @@
 <div class="small-container center-block">
     <p class="font-weight-bold text-uppercase margin-top">Editar Usuario</p>
     <%= form_with(model: current_user, local: true) do |form| %>
-        <%= image_tag url_for(current_user.avatar), height: 200 %>
+        <% if current_user.avatar.attached? %>
+            <%= image_tag url_for(current_user.avatar), height: 200 %>
+        <% end %>
     
         <div class="field">
             <%= form.label :avatar %>
